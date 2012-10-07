@@ -4,7 +4,7 @@ This project is an installer for a non-rooted Android shell command line version
 
 Requirements:
 
-    + ARM-based Android device.
+    + ARM armeabi-v7a based Android device.
     + Android 1.6 or newer.
     + You must have a terminal emulator such as Android Terminal Emulator installed on your device.
     + You must have "adb" installed on your computer.
@@ -12,11 +12,12 @@ Requirements:
 
 Features:
 
-    + Installs command-line versions of ssh, scp, and related command-line tools.
-    + Works on ordinary non-Rooted Android devices.
+    + Installs command-line versions of ssh, scp, and sftp.
+    + Works on ordinary non-rooted Android devices.
 
 Install instructions:
 
+    Connect your android device to your computer with USB cable.
     $ tools/install.sh
 
 Use instructions:
@@ -24,7 +25,9 @@ Use instructions:
     + Launch Android Terminal Emulator
     + Put /data/local/bin on your PATH
     + Put /data/local/lib on your LD_LIBRARY_PATH
+    $ ssh username@host
 
-Known Bugs:
+Known Bugs / Limitations:
 
     + Looks for configuration files in /data/.ssh (which is not writable by non-rooted phones.)
+    + Only supports armeabi-v7a devices.
